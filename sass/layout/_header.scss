@@ -1,0 +1,130 @@
+.header {
+    border-bottom: 1px solid #ececec;
+  
+  
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  &__logo {
+    color: var(--primary-text-color);
+  
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+  }
+  
+  &__extra-color {
+    color: var(--accent-color);
+  }
+  
+  &__menu-list {
+    display: flex;
+    margin-left: 93px;
+  }
+  
+  &__menu-list .menu-list__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  
+  &__menu-list .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  
+    color: var(--primary-text-color);
+  
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+  
+  &__menu-list .link:hover {
+    color: var(--accent-color);
+  }
+  
+  &__menu-list .link:focus {
+    color: var(--accent-color);
+  }
+  
+  &__menu-list .link.current {
+    color: var(--accent-color);
+  }
+  
+  &__info-list {
+    display: flex;
+    margin-left: auto;
+    
+  }
+  
+  &__info-list .info-list__item + .info-list__item {
+    margin-left: 50px;
+  }
+
+}
+
+  
+  /* Info */
+  
+  .menu-list__link {
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+     transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+  }
+  
+  .current::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+  
+    background-color: var(--accent-color);
+  
+    position: absolute;
+  
+    top: 96.5%;
+    left: 0;
+  }
+
+  
+  .info-list__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+  
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+     transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .info-list__link:hover,
+  .info-list__link:focus {
+    color: var(--accent-color);
+    
+  }
+  
+  .info-list__icon {
+    margin-right: 10px;
+    fill: #757575;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+     transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .info-list__link:hover .info-list__icon,
+  .info-list__link:focus .info-list__icon {
+    fill: var(--accent-color);
+  }
